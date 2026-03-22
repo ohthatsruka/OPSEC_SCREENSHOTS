@@ -30,7 +30,20 @@ Puedes modificar lo siguiente dentro del script:
 ### Ejecucion sin consola
 **En windows**: Sólo con cambiar el nombre del script de main.py a main.pyw se ejecutará sin terminal, solo q luego tendrás q cerrarlo desde el administrador de tareas
 **En linux**: ```bash
-nohup python3 /ruta/absoluta/a/tu/opsec.py > /dev/null 2>&1 &```
+nohup python3 /ruta/absoluta/a/tu/main.py > /dev/null 2>&1 &``` y luego para cerrarlo corres este comando en la terminal: ```ps aux | grep main.py``` y lo cierras con ```kill <PID>```
 
 ### Autostart
-**En windows**: 
+**En windows**: Primero que el archivo sea .pyw, haces un acceso directo al archivo, vas al programa "ejecutar" (win+r) y eescribes ```shell:startup``` y le das a enter, cuando se te abra una carpeta tienes que arrastrar el acceso directo ahí y listo
+**En linux**: 
+--Para KDE Plsma, gnome,Ubuntu...---
+creas el archivo de autoinicio con```nano ~/.config/autostart/opsec.desktop``` y eescribes esto:
+[Desktop Entry]
+Type=Application
+Name=OPSEC Screenshot
+Comment=Espera y censura capturas de pantalla
+Exec=python3 /ruta/absoluta/a/tu/main.py
+Terminal=false
+---Para HYPRLAND---
+```nano ~/.config/hypr/hyprland.conf```
+buscas la sección exec-once y añades esto: 
+```exec-once = nohup python3 /ruta/absoluta/a/tu/main.py > /dev/null 2>&1 &```
