@@ -40,6 +40,7 @@ nohup python3 /ruta/absoluta/a/tu/main.py > /dev/null 2>&1 &``` y luego para cer
 **En windows**: Primero que el archivo sea .pyw, haces un acceso directo al archivo, vas al programa "ejecutar" (win+r) y eescribes ```shell:startup``` y le das a enter, cuando se te abra una carpeta tienes que arrastrar el acceso directo ahí y listo
 
 **En linux**: 
+
 --Para KDE Plsma, gnome,Ubuntu...---
 
 creas el archivo de autoinicio con```nano ~/.config/autostart/opsec.desktop``` y eescribes esto:
@@ -49,6 +50,7 @@ Name=OPSEC Screenshot
 Comment=Espera y censura capturas de pantalla
 Exec=python3 /ruta/absoluta/a/tu/main.py
 Terminal=false
+
 ---Para HYPRLAND---
 
 ```nano ~/.config/hypr/hyprland.conf```
