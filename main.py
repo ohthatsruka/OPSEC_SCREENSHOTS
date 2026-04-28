@@ -18,7 +18,7 @@ from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 from PIL import Image, ImageDraw
 import re
-import pytessereact
+import pytesseract
 
 RUTA_TESSERACT_WINDOWS = ""  # <-- Solo para Windows, lo puedes borrar si usas linux
 
